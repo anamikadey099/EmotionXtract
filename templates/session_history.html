@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session History | EmotionXtract</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Session <span class="highlight">History</span></h1>
+            <p class="subheading">Review and track insights from past sessions.</p>
+        </header>
+
+        <main class="history">
+            {% if sessions %}
+                {% for session in sessions %}
+                    <div class="session-card">
+                        <h2>Session {{ loop.index }}</h2>
+                        <p class="date">Date: <strong>{{ session.date }}</strong></p>
+                        <p class="dominant-emotion">
+                            Dominant Emotion: <strong>{{ session.dominant_emotion }}</strong>
+                        </p>
+                        <p class="total-count">Total Emotions Detected: {{ session.total_emotions }}</p>
+                        <button class="button view-session" onclick="viewSession('{{ session.session_id }}')">View Details</button>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-sessions">
+                    <p>No sessions found. Start a new session to see data here!</p>
+                </div>
+            {% endif %}
+        </main>
+
+        <footer class="footer">
+            <button class="button secondary" onclick="goToHome()">Go to Home</button>
+        </footer>
+    </div>
+
+    <script>
+        function viewSession(sessionId) {
+            window.location.href = `/dashboard?session_id=${sessionId}`;
+        }
+
+        function goToHome() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

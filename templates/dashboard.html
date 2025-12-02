@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EmotionXtract</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Your <span class="highlight">Dashboard</span></h1>
+            <p class="subheading">Discover insights and trends from your session.</p>
+        </header>
+
+        <main class="dashboard">
+            <div class="section">
+                <h2>Session Summary</h2>
+                <div class="summary-card">
+                    <p><strong>Dominant Emotion:</strong> {{ dominant_emotion }}</p>
+                    <p><strong>Percentage:</strong> {{ dominant_percentage }}%</p>
+                </div>
+            </div>
+
+            <div class="section chart-container">
+                <h2>Emotion Distribution</h2>
+                <img src="{{ pie_chart_path }}" alt="Emotion Distribution Pie Chart" class="chart">
+            </div>
+
+            <div class="section chart-container">
+                <h2>Emotion Trends Over Time</h2>
+                <img src="{{ trend_chart_path }}" alt="Emotion Trends Over Time" class="chart">
+            </div>
+
+            <div class="button-container">
+                <button class="button secondary" onclick="goToHome()">Go to Home</button>
+                <button class="button primary" onclick="viewSessionHistory()">View Session History</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>EmotionXtract &copy; 2024 | Designed with <span class="highlight">♥</span></p>
+        </footer>
+    </div>
+
+    <script>
+        function goToHome() {
+            window.location.href = '/';
+        }
+
+        function viewSessionHistory() {
+            window.location.href = '/session_history';
+        }
+    </script>
+</body>
+</html>

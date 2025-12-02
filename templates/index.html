@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | EmotionXtract</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Welcome to <span class="highlight">EmotionXtract</span></h1>
+            <p class="subheading">Analyze and understand emotions in real-time.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="button-container">
+                <button id="start-button" class="button primary" onclick="startLiveFeed()">Start Live Feed</button>
+            </div>
+
+            <div id="live-feed-container" style="display: none;">
+                <h2 class="section-heading">Live Feed</h2>
+                <div class="live-feed-wrapper">
+                    <img id="live-feed" class="live-feed" src="" alt="Live Feed">
+                    <p id="timer" class="timer">Timer: 00:00</p>
+                </div>
+                <div class="button-container">
+                    <button id="end-button" class="button secondary" onclick="endLiveFeed()">End Session</button>
+                </div>
+            </div>
+
+            <div id="after-feed-container" style="display: none;">
+                <h2 class="section-heading">Session Ended</h2>
+                <div class="button-container">
+                    <button class="button primary" onclick="goToDashboard()">Go to Dashboard</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>EmotionXtract &copy; 2024 | Designed with <span class="highlight">♥</span></p>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
