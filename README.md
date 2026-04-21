@@ -312,9 +312,34 @@ ReduceLROnPlateau(factor=0.5, patience=3)
 
 ---
 
+## 👥 Collaborators
+
 <div align="center">
 
-*Built with 🧠 + ❤️ by [Geetish Mahato](https://github.com/GeetishM)*
+<table>
+  <tr>
+      <td align="center">
+      <a href="https://github.com/anamikadey099">
+        <img src="https://github.com/anamikadey099.png" width="80" style="border-radius:50%"/><br/>
+        <b>Anamika Dey</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/GeetishM">
+        <img src="https://github.com/GeetishM.png" width="80" style="border-radius:50%"/><br/>
+        <b>Geetish Mahato</b>
+      </a>
+    </td>
+   </tr>
+</table>
+
+</div>
+
+---
+
+<div align="center">
+
+*Built with 🧠 + ❤️ by the EmotionXtract team*
 
 ⭐ If this project helped you, consider giving it a star!
 
